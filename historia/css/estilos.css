@@ -1,0 +1,101 @@
+* {
+  font-family: arial;
+}
+#conteudo {
+  text-align: center;
+}
+p {
+  text-align: left;
+  margin: 0;
+  padding-left: 20px;
+}
+img {
+  width: 70vw;
+  height: 50vh;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+.botao {
+  display: flex;
+  height: 5vh;
+  flex-direction: row;
+  align-content: flex-end;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+body.dark label {
+  background: white;
+}
+body.dark {
+  background: rgb(0, 0, 0);
+  color: white;
+}
+input[type="checkbox"] {
+  height: 0;
+  width: 0;
+  visibility: hidden;
+}
+
+label {
+  cursor: pointer;
+  text-indent: -9999px;
+  width: 52px;
+  height: 27px;
+  background: rgb(0, 0, 0);
+  float: right;
+  border-radius: 100px;
+  position: relative;
+  margin-right: 10px;
+}
+
+label::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+input:checked + label {
+  background-color: white;
+}
+
+input:checked + label::after {
+  left: calc(100% - 5px);
+  transform: translateX(-100%);
+  background: black;
+}
+
+label:active:after {
+  width: 45px;
+}
+input {
+  visibility: hidden;
+}
+button {
+  background-color: #000000;
+  border: solid 1px white;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  border-radius: 8px;
+  -webkit-transition-duration: 0.4s;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+button:hover {
+  background-color: #ffffff;
+  color: rgb(0, 0, 0);
+}
